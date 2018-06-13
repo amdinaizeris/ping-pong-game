@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+       <html lang="en">
+       <head>
+         <meta charset="utf-8">
+         <title>Ping Pong</title>
+       </head>
+       <body>
+         <header>
+           <h1>Ping Pong</h1>
+         </header>
+<style>
+#playground{
+         background: #e0ffe0 url(images/playground.png);
+		 background-size: contain;
+         width: 500px;
+         height: 250px;
+         position: relative;
+         overflow: hidden;
+         border-left: 1px solid black;
+         border-right: 1px solid black;
+		 top: 0;
+		 left: 0;
+}
+#ball {
+        background: black;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 150px;
+        top: 100px;
+        border-radius: 10px;
+}
+.paddle {
+        background: contain;
+        left: 50px;
+        top: 70px;
+        position: absolute;
+        width: 50px;
+        height: 120px;
+        color: white;
+}
+
+#paddleA{
+left:40px;
+background: url(images/paddleA.png);
+}
+
+#paddleB {
+        left: 400px;
+		background: url(images/paddleB.png);
+}
+
+.paddle-hand {
+background: url(images/paddle.png) 50% 0
+repeat-y;
+background-size: contain;
+width: 30px;
+height: 100%;
+position: absolute;
+top: 0;
+}
+
+.left.paddle-hand {
+left: 50px;
+}
+
+.right.paddle-hand {
+right: 50px;
+}
+
+.upLeft{
+  float: left;
+}
+.DownLeft {
+  margin-left: 436px;
+}
+.upRight{
+ float: left;
+}
+.DownRight {
+  margin-left: 402px;
+}
+</style>
+<div id="scoreboard">
+         <div class="score">Player A : <span id="scoreA">0</span></div>
+         <div class="score">Player B : <span id="scoreB">0</span></div>
+</div>
+
+<div id="game">
+<input id="upLeft" class='upLeft' type="submit" value="Up" onClick=""> <!-- LEFT -->
+<input id="upRight" class='DownLeft' type="submit" value="Up" onClick=""> <!-- RIGHT -->
+         <div id="playground">
+           <div id="paddleA" class="paddle"></div>
+           <div id="paddleB" class="paddle"></div>
+           <div id="ball"></div>
+     </div>
+<input id="DownLeft" class='upRight' type="submit" value="Down" onClick=""> <!-- LEFT -->
+<input id="DownRight" class='DownRight' type="submit" value="Down" onClick=""> <!-- RIGHT -->
+</div>
+         <footer>
+           <br/>lab nr 1
+         </footer>
+         <script src="js/jquery-1.4.4.js"></script>
+         <script src="js/html5games.pingpong.js"></script>
+       </body>
+       </html>
